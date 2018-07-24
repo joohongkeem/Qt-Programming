@@ -14,12 +14,12 @@ Widget::Widget(QWidget *parent)
 
 
 
-    this->lLabel = new QLabel(this->sNum, this);
+    lLabel = new QLabel(sNum, this);
     lLabel->resize(160,35);
     lLabel->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
     // 우측정렬(AlignRight) + 위아래기준중앙정렬(AlignVCenter)
 
-    this->lOp = new QLabel("",this);
+    lOp = new QLabel("",this);
     lOp->resize(10,10);
     lOp->move(10,10);
     lOp->setAlignment(Qt::AlignLeft|Qt::AlignVCenter);
@@ -72,163 +72,163 @@ Widget::~Widget()
 void Widget::slotZero()
 {
 
-    if(this->sNum == "0");
+    if(sNum == "0");
     else
     {
-        this->sNum.append("0");
+        sNum.append("0");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotOne()
 {
-    if(this->sNum == "0") this->sNum = "1";
+    if(sNum == "0")sNum = "1";
     else
     {
-       this->sNum.append("1");
+       sNum.append("1");
     }
 
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 
 }
 void Widget::slotTwo()
 {
-    if(this->sNum == "0")this->sNum = "2";
+    if(sNum == "0")sNum = "2";
     else
     {
-        this->sNum.append("2");
+        sNum.append("2");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotThree()
 {
-    if(this->sNum == "0")this->sNum = "3";
+    if(sNum == "0")sNum = "3";
     else
     {
-        this->sNum.append("3");
+        sNum.append("3");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotFour()
 {
-    if(this->sNum == "0")this->sNum = "4";
+    if(sNum == "0")sNum = "4";
     else
     {
-        this->sNum.append("4");
+        sNum.append("4");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotFive()
 {
-    if(this->sNum == "0")this->sNum = "5";
+    if(sNum == "0")sNum = "5";
     else
     {
-        this->sNum.append("5");
+        sNum.append("5");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotSix()
 {
-    if(this->sNum == "0")this->sNum = "6";
+    if(sNum == "0")sNum = "6";
     else
     {
-        this->sNum.append("6");
+        sNum.append("6");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotSeven()
 {
-    if(this->sNum == "0")this->sNum = "7";
+    if(sNum == "0")sNum = "7";
     else
     {
-        this->sNum.append("7");
+        sNum.append("7");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotEight()
 {
-    if(this->sNum == "0")this->sNum = "8";
+    if(sNum == "0")sNum = "8";
     else
     {
-        this->sNum.append("8");
+        sNum.append("8");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotNine()
 {
-    if(this->sNum == "0")this->sNum = "9";
+    if(sNum == "0")sNum = "9";
     else
     {
-        this->sNum.append("9");
+        sNum.append("9");
     }
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
 }
 void Widget::slotClear()
 {
     this -> nLeft = 0;
     this -> nRight = 0;
     this -> sNum = "0";
-    this->lLabel->setText(this->sNum);
+    lLabel->setText(sNum);
     this -> cOp = "";
 }
 void Widget::slotAdd()
 {
-    if(this->cOp == 0)this->nLeft = this->sNum.toFloat();
-    this->sNum = "0";
-    this->cOp = "+";
-    this->lOp->setText(this->cOp);
+    if(cOp == 0)nLeft = sNum.toFloat();
+    sNum = "0";
+    cOp = "+";
+    lOp->setText(cOp);
 
 }
 void Widget::slotSub()
 {
-    if(this->cOp == 0)this->nLeft = this->sNum.toFloat();
-    this->sNum = "0";
-    this->cOp = "-";
-    this->lOp->setText(this->cOp);
+    if(cOp == 0)nLeft = sNum.toFloat();
+    sNum = "0";
+    cOp = "-";
+    lOp->setText(cOp);
 }
 void Widget::slotDiv()
 {
-    if(this->cOp == 0)this->nLeft = this->sNum.toFloat();
-    this->sNum = "0";
-    this->cOp = "/";
-    this->lOp->setText(this->cOp);
+    if(cOp == 0)nLeft = sNum.toFloat();
+    sNum = "0";
+    cOp = "/";
+    lOp->setText(cOp);
 }
 void Widget::slotMul()
 {
-    if(this->cOp == 0)this->nLeft = this->sNum.toFloat();
-    this->sNum = "0";
-    this->cOp = "*";
-    this->lOp->setText(this->cOp);
+    if(cOp == 0)nLeft = sNum.toFloat();
+    sNum = "0";
+    cOp = "*";
+    lOp->setText(cOp);
 }
 void Widget::slotResult()
 {
 
-    if(this->cOp=="+")
+    if(cOp=="+")
     {
-        this->nRight = this->sNum.toFloat();
-        this->sNum.setNum(this->nLeft + this->nRight, 'g',6);
-        this->lLabel->setText(this->sNum);
+        nRight = sNum.toFloat();
+        sNum.setNum(nLeft + nRight, 'g',6);
+        lLabel->setText(sNum);
     }
-    if(this->cOp=="-")
+    if(cOp=="-")
     {
-        this->nRight = this->sNum.toFloat();
-        this->sNum.setNum(this->nLeft - this->nRight, 'g',6);
-        this->lLabel->setText(this->sNum);
+        nRight = sNum.toFloat();
+        sNum.setNum(nLeft - nRight, 'g',6);
+        lLabel->setText(sNum);
     }
-    if(this->cOp=="/")
+    if(cOp=="/")
     {
-        this->nRight = this->sNum.toFloat();
-        if(this->nRight == 0) sNum = "Can't Devide by 0";
-        else this->sNum.setNum(this->nLeft / this->nRight, 'g',6);
-        this->lLabel->setText(this->sNum);
+        nRight = sNum.toFloat();
+        if(nRight == 0) sNum = "Can't Devide by 0";
+        else sNum.setNum(nLeft / nRight, 'g',6);
+        lLabel->setText(sNum);
     }
-    if(this->cOp=="*")
+    if(cOp=="*")
     {
-        this->nRight = this->sNum.toFloat();
-        this->sNum.setNum(this->nLeft * this->nRight, 'g',6);
-        this->lLabel->setText(this->sNum);
+        nRight = sNum.toFloat();
+        sNum.setNum(nLeft * nRight, 'g',6);
+        lLabel->setText(sNum);
     }
-    this->nLeft = this->sNum.toFloat();
+    nLeft = sNum.toFloat();
 
-    this->cOp ="";
-    this->lOp->setText(this->cOp);
+    cOp ="";
+    lOp->setText(cOp);
 }
