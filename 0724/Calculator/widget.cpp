@@ -217,7 +217,10 @@ void Widget::slotResult()
     if(cOp=="/")
     {
         nRight = sNum.toFloat();
-        if(nRight == 0) sNum = "Can't Devide by 0";
+        if(nRight == 0)
+        {
+            sNum = "Can't Devide by 0";
+        }
         else sNum.setNum(nLeft / nRight, 'g',6);
         lLabel->setText(sNum);
     }

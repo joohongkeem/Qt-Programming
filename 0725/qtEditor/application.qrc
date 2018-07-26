@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon/aligncenter.png</file>
+        <file>Icon/alignjustify.png</file>
+        <file>Icon/alignleft.png</file>
+        <file>Icon/alignright.png</file>
+        <file>Icon/copy.png</file>
+        <file>Icon/cut.png</file>
+        <file>Icon/new.png</file>
+        <file>Icon/open.png</file>
+        <file>Icon/paste.png</file>
+        <file>Icon/print.png</file>
+        <file>Icon/quit.png</file>
+        <file>Icon/redo.png</file>
+        <file>Icon/save.png</file>
+        <file>Icon/saveas.png</file>
+        <file>Icon/undo.png</file>
+        <file>Icon/zoomin.png</file>
+        <file>Icon/zoomout.png</file>
+        <file>Icon/cascadealign.png</file>
+        <file>Icon/tilealign.png</file>
+        <file>Icon/nextwindow.png</file>
+        <file>Icon/prevwindow.png</file>
+        <file>Icon/closeall.png</file>
+        <file>Icon/closeone.png</file>
+        <file>Icon/smile.png</file>
+        <file>Icon/angry.png</file>
+        <file>Icon/about.png</file>
+        <file>Icon/aboutQt.png</file>
+        <file>Icon/aboutqt.png</file>
+        <file>Icon/color.png</file>
+        <file>Icon/font.png</file>
+    </qresource>
+</RCC>
